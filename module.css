@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.page-top{
+	height: 8px;
+	background: linear-gradient(to right,#1aecff,#ff1a62);
+}
+
+.header-sign{
+	margin-top: 35px;
+    color: white;
+}
+
+.sign-adp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.keep-right{
+	float: right;
+}
+.keep-left{
+    float: left;
+}
+
+.introduce{
+	width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.header-share{
+	width: 15%;
+}
+
+.header-share div:hover{
+    cursor: pointer;
+}
+
+.logo-text{
+	display: block;
+	font-size: 50px;
+    letter-spacing: 12px;
+    position: relative;
+    z-index: 1;
+    font-family: serif;
+}
+.logo-text:after{
+	    content: '';
+    display: block;
+    position: absolute;
+    width: 195px;
+    height: 5px;
+    top: 33px;
+    left: -8px;
+    background: linear-gradient(to right,#1aecff,#ff1a62);
+    z-index: -1;
+}
+
+.sign{
+	display: inline-block;
+    cursor: pointer;
+}
+.header-share .sign:nth-child(2){
+	margin-top: 2px;
+}
+
+svg{
+	opacity: .5;
+	transition: opacity .3s
+}
+svg:hover{
+	opacity: 2;
+}
+
+.page-info{
+	width: 100%;
+    margin: 10px auto;
+}
+
+.lead-font{
+	color: gainsboro;
+    font-size: 1.3em;
+}
+
+.main{
+	margin-top: 3%;
+}
+.weight{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@keyframes class{
+	0%{color: #fff}
+	30%{color: rgb(123,143,180)}
+	70%{color: rgb(249,49,114)}
+	100%{color: #fff}
+}
+.main .h2{
+	display: inline-block;
+
+	animation: class 5s infinite;
+}
+
+.component-box{
+	height: 125px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.row .component-box:hover{
+	background: rgb(24,25,59);
+}
+
+.full-hide{
+    overflow: hidden; 
+}
+
+.module{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: rgba(5,5,20,.5);
+}
+
+.module-code{
+    height: 95%;
+    width: 38em;
+    background-color: rgba(32,34,71,0.9); 
+    display: flex;
+    justify-content: center;
+    min-width: 25em;
+}
+.code{
+    width: 87%;
+    height: 100%;
+}
+.code-area{
+    height: 68%;
+    margin-top: 10%;
+}
+.code-area1{
+    height: 18%;
+    margin-top: 3%;
+    color: white;
+}
+
+.scroll{
+    height: 100%;
+}
+.scroll-code{
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(39,41,84);
+    color: white;
+    padding:0 1em;
+    font-family: inherit;
+    font-size: 1.2em;
+    overflow-y: scroll;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+/*点击复制成功动画*/
+@keyframes copyShow{
+    0%{opacity: .7;}
+    40%{opacity: 1;}
+    100%{opacity: 0;}
+}
+/*点击复制成功动画添加的类名*/
+.copyEnterSign{
+    animation: copyShow 1s linear;
+    height: 20px;
+}

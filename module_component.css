@@ -1,0 +1,805 @@
+#FormText button{
+    z-index: 1;
+	padding: .5em 1em;
+	font-size: inherit;
+    font-family: inherit;
+    position: relative;
+    border: none;
+    background-color:#2d3058;
+    transition: color 0.5s;
+    color: #fff;
+    outline: 0
+}
+
+#FormText button:hover{
+    color: black;
+}
+
+/* Bubble(button) */
+
+#FormText div:nth-child(1) button:before{
+	content: '';
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #3cefff;
+    transform-origin: center;
+    transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#FormText div:nth-child(1) button:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#FormText div:nth-child(2) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute; 
+    width: 1em;
+    height: 1em;
+    transform: translate(100%,-100%) scale(0);
+    border-radius: 50%;
+    background-color: #3cefff;
+    transition: transform 0.45s ease-in-out;
+}
+#FormText div:nth-child(2) button:hover:before{
+    transform: translate(0) scale(15);
+}
+
+#FormText div:nth-child(3) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute; 
+    width: 1em;
+    height: 1em;
+    transform: translate(-150%,30%) scale(0);
+    border-radius: 50%;
+    background-color: #3cefff;
+    transition: transform 0.4s ease-in-out;
+}
+#FormText div:nth-child(3) button:hover:before{
+    transform: translate(10%,50%) scale(15);
+}
+
+#FormText div:nth-child(4) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute; 
+    width: 1em;
+    height: 1em;
+    transform: translate(400%,30%) scale(0);
+    border-radius: 50%;
+    background-color: #3cefff;
+    transition: transform 0.4s ease-in-out;
+}
+#FormText div:nth-child(4) button:hover:before{
+    transform: translate(10%,50%) scale(15);
+}
+
+#FormText div:nth-child(5) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute; 
+    width: 1em;
+    height: 1em;
+    transform: translate(100%,30%) scale(0);
+    border-radius: 50%;
+    background-color: #3cefff;
+    transition: transform 0.4s ease-in-out;
+}
+#FormText div:nth-child(5) button:hover:before{
+    transform: translate(10%,50%) scale(15);
+}
+
+/* Slied(button) */
+
+#FormText div:nth-child(6) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /*让背景铺满父元素*/
+    transform-origin: center right; /*实现此特效的关键，将过渡初始位置改变，从而达到需要的效果位置*/
+    transform: scaleX(0);
+    background-color: rgb(252,47,112);
+    transition: transform 0.4s ease-in-out; 
+}
+#FormText div:nth-child(6) button:hover:before{
+    transform-origin: center left;
+    transform: scaleX(1);
+}
+
+#FormText div:nth-child(7) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(252,47,112);
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out; 
+}
+#FormText div:nth-child(7) button:hover:before{
+    transform-origin: center right;
+    transform: scaleX(1);
+}
+
+#FormText div:nth-child(8) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(252,47,112);
+    transform-origin: center ;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out; 
+}
+#FormText div:nth-child(8) button:hover:before{
+    transform-origin: center;
+    transform: scaleX(1);
+}
+
+#FormText div:nth-child(9) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(252,47,112);
+    transform-origin: center;
+    transform: scaleY(0);
+    transition: transform 0.4s ease-in-out; 
+}
+#FormText div:nth-child(9) button:hover:before{
+    transform-origin: center;
+    transform: scaleY(1);
+}
+
+#FormText div:nth-child(10) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(252,47,112);
+    transform-origin: center top;
+    transform: scaleY(0);
+    transition: transform 0.4s ease-in-out; 
+}
+#FormText div:nth-child(10) button:hover:before{
+    transform-origin: center bottom;
+    transform: scaleY(1);
+}
+
+#FormText div:nth-child(11) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(252,47,112);
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: transform 0.4s ease-in-out; 
+}
+#FormText div:nth-child(11) button:hover:before{
+    transform-origin: center top;
+    transform: scaleY(1);
+}
+
+#FormText div:nth-child(12) button:before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: -50%;
+    bottom: -50%;
+    width: 2em;
+    transform: translate(-500%,0) rotate(30deg);
+    background-color: hsla(0,0%,100%,.2);
+}
+#FormText div:nth-child(12) button:hover:before{
+    transform: translate(500%,0);
+    transition: transform .5s ease-in-out;
+}
+
+/* input */
+
+#FormText .input-container{
+    position: relative;
+}
+#FormText input{
+    width: 7em;
+    background-color: hsl(236, 32%, 26%);
+    border: 1px solid transparent;
+    padding: .2em .2em;
+    font-size: inherit;
+    font-family: inherit;
+}
+#FormText input:focus{
+    outline: none;
+}
+
+
+#FormText div:nth-child(13) .input-container span{
+   position: absolute;
+   background-color: #3cefff;
+   transition: transform 0.5s ease;
+}
+#FormText div:nth-child(13) input ~ .bottom{
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform-origin: center bottom;
+    transform: scaleX(0);
+}
+#FormText div:nth-child(13) input:focus ~ .bottom{
+    transform-origin: center bottom;
+    transform: scaleX(1);
+}
+#FormText div:nth-child(13) input ~ .top{
+    height: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: center top;
+    transform: scaleX(0);
+}
+#FormText div:nth-child(13) input:focus ~ .top{
+    transform-origin: center top;
+    transform: scaleX(1);
+}
+#FormText div:nth-child(13) input ~ .left{
+    width: 1px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform-origin: center left;
+    transform: scaleY(0);
+}
+#FormText div:nth-child(13) input:focus ~ .left{
+    transform-origin: center left;
+    transform: scaleY(1);
+}
+#FormText div:nth-child(13) input ~ .right{
+    width: 1px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform-origin: center right;
+    transform: scaleY(0);
+}
+#FormText div:nth-child(13) input:focus ~ .right{
+    transform-origin: center right;
+    transform: scaleY(1);
+}
+
+
+#FormText div:nth-child(14) .input-container span{
+   position: absolute;
+   background-color: #3cefff;
+   transition: transform 0.5s ease;
+}
+#FormText div:nth-child(14) input ~ .bottom{
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform-origin: left bottom;
+    transform: scaleX(0);
+}
+#FormText div:nth-child(14) input:focus ~ .bottom{
+    transform-origin: right bottom;
+    transform: scaleX(1);
+}
+#FormText div:nth-child(14) input ~ .top{
+    height: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: right top;
+    transform: scaleX(0);
+}
+#FormText div:nth-child(14) input:focus ~ .top{
+    transform-origin: left top;
+    transform: scaleX(1);
+}
+#FormText div:nth-child(14) input ~ .left{
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: left top;
+    transform: scaleY(0);
+}
+#FormText div:nth-child(14) input:focus ~ .left{
+    transform-origin: left bottom;
+    transform: scaleY(1);
+}
+#FormText div:nth-child(14) input ~ .right{
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform-origin: right bottom;
+    transform: scaleY(0);
+}
+#FormText div:nth-child(14) input:focus ~ .right{
+    transform-origin: right top;
+    transform: scaleY(1);
+}
+
+#FormText div:nth-child(15) .input-container span{
+    position: absolute;
+    background-color: #3cefff;
+    transition: transform 0.1s ease-in-out;
+}
+#FormText div:nth-child(15) input ~ .bottom{
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform-origin: right bottom;
+    transform: scaleX(0);
+}
+#FormText div:nth-child(15) input:focus ~ .bottom{
+    transform-origin: left bottom;
+    transform: scaleX(1);
+}
+#FormText div:nth-child(15) input ~ .right{
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform-origin: right top;
+    transform: scaleY(0);
+}
+#FormText div:nth-child(15) input:focus ~ .right{
+    transform-origin: right bottom;
+    transform: scaleY(1);
+    transition-delay: .1s; 
+}
+#FormText div:nth-child(15) input ~ .top{
+    height: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform-origin: left top;
+    transform: scaleX(0);
+}
+#FormText div:nth-child(15) input:focus ~ .top{
+    transform-origin: right top;
+    transform: scaleX(1);
+    transition-delay: .2s; 
+}
+#FormText div:nth-child(15) input ~ .left{
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: left bottom;
+    transform: scaleY(0);
+}
+#FormText div:nth-child(15) input:focus ~ .left{
+    transform-origin: left top;
+    transform: scaleY(1);
+    transition-delay: .3s; 
+}
+
+#FormText div:nth-child(16) input{
+    border-bottom-color: hsla(185, 100%, 62%, 0.2);
+    background-color: transparent;
+}
+#FormText div:nth-child(16) input:hover{
+    background-color: transparent;
+    background-color: hsl(236, 32%, 26%);
+}
+#FormText div:nth-child(16) .input-container .bottom{
+    position: absolute;
+    background-color: #3cefff;
+    transition: transform .4s ease-in-out;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform-origin: center bottom;
+    transform: scaleX(0);
+    transition: transform .4s ease-in-out;
+}
+
+#FormText div:nth-child(16) input:focus ~ .bottom{
+    transform: scaleX(1);
+}
+
+/* text */
+
+#FormText .text-special{
+    position: relative;
+}
+#FormText div:nth-child(17) span:after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #3cefff;
+    transform-origin: left top; 
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(17) span:hover::after{
+    transform-origin: right top; 
+    transform: scaleX(1);
+}
+#FormText div:nth-child(17) span:before{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: #3cefff;
+    transform-origin: left top; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(17) span:hover::before{
+    transform-origin: right top; 
+    transform: scaleX(1);
+}
+
+
+
+#FormText div:nth-child(18) .text-special{
+    padding: 0 4px;
+}
+#FormText div:nth-child(18) span:after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #3cefff;
+    transform-origin: right top; 
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleY(0);
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(18) span:hover::after{
+    transform-origin: right bottom; 
+    transform: scaleY(1);
+}
+#FormText div:nth-child(18) span:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #3cefff;
+    transform-origin: left top; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0);
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(18) span:hover::before{
+    transform-origin: left bottom; 
+    transform: scaleY(1);
+}
+
+#FormText div:nth-child(19) .text-special{
+    z-index: 21;
+    transition: color .3s ease-in-out;
+}
+#FormText div:nth-child(19) .text-special:hover{
+    color: black;
+}
+#FormText div:nth-child(19) span::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-color: #3cefff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: scaleY(0.1);
+    transform-origin: center bottom;
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(19) span:hover::after{
+    transform: scaleY(1);
+}
+
+
+#FormText div:nth-child(20) .text-special{
+    z-index: 1;
+    transition: color .3s ease-in-out;
+    padding: 2px;
+}
+#FormText div:nth-child(20) .text-special:hover{
+    color: black;
+}
+#FormText div:nth-child(20) span::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-color: #3cefff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(20) span:hover::after{
+    transform-origin: left center;
+    transform: scaleX(1);
+}
+
+#FormText div:nth-child(21) .text-special{
+    z-index: 1;
+    border-bottom: 2px solid rgba(60,239,255,.2);
+}
+#FormText div:nth-child(21) span::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    background-color: #3cefff;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: center bottom;
+    transition: transform .3s ease-in-out;
+}
+#FormText div:nth-child(21) span:hover::after{
+    transform: scaleX(1);
+}
+
+#Loading div:nth-child(1)  div{
+    width:40px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#Loading div:nth-child(1)  span{
+    height: 2.5em;
+    width: .4em;
+    background-color: #3cefff;
+}
+@keyframes grows{
+    0%{}
+    50%{transform: scaleY(.4)}
+    100%{transform: scaleY(1);}
+}
+#Loading div:nth-child(1)  span:nth-of-type(1) {
+  animation: grows 1s -0.45s ease-in-out infinite;
+}
+
+#Loading div:nth-child(1)  span:nth-of-type(2) {
+  animation: grows 1s -0.3s ease-in-out infinite;
+}
+
+#Loading div:nth-child(1)  span:nth-of-type(3) {
+  animation: grows 1s -0.15s ease-in-out infinite;
+  /*第三个参数的负值是表示 animation-delay ，表示跳过动画的前多少秒，这里是 0.15 秒*/
+}
+
+#Loading div:nth-child(1)  span:nth-of-type(4) {
+  animation: grows 1s ease-in-out infinite;
+}
+
+#Loading div:nth-child(2) span{
+    display: block;
+    height: 2.2em;
+    width: 2.2em;
+    border: 3px solid #3cefff;
+    position: relative;
+    animation: rotateSquare 2.3s ease-in-out infinite;
+}
+@keyframes rotateSquare{
+    0%{transform: rotate(0deg);}
+   60%{transform: rotate(360deg);}
+   100%{transform: rotate(360deg);}
+}
+#Loading div:nth-child(2) span::after{
+    transform-origin: center bottom;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3cefff;
+    opacity: .5; 
+    animation: rotateSquareInset 2.3s ease-in-out infinite;
+}
+@keyframes rotateSquareInset{
+    0%{transform: scaleY(1);}
+   30%{transform: scaleY(0);}
+   65%{transform: scaleY(0);}
+   90%{transform: scaleY(1);}
+  100%{transform: scaleY(1);}
+}
+
+#Loading div:nth-child(3) span{
+    position: relative;
+    display: block;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+}
+#Loading div:nth-child(3) span::after{
+    content: '';
+    position: absolute;
+    display: block;
+    left: -1.2em;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    animation: leftKnock .5s alternate ease-in infinite;
+}
+@keyframes leftKnock{
+    0%{transform: translateX(-220%)}
+    50%{transform: translateX(0)}
+}
+#Loading div:nth-child(3) span::before{
+    content: '';
+    position: absolute;
+    display: block;
+    right: -1.2em;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    animation: rightKnock .5s .5s alternate ease-in infinite;
+}
+@keyframes rightKnock{
+    0%{transform: translateX(220%)}
+    50%{transform: translateX(0)}
+}
+
+
+#Loading div:nth-child(4) span{
+    position: relative;
+    display: block;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    animation: transparentLoading .8s ease-in-out infinite;
+    animation-delay: .2s
+}
+#Loading div:nth-child(4) span::after{
+    content: '';
+    position: absolute;
+    display: block;
+    left: -2em;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    animation: transparentLoading .8s ease-in-out infinite;
+}
+@keyframes transparentLoading{
+    0%{background-color: rgba(252,47,112,1);}
+    50%{background-color: rgba(252,47,112,0);}
+    100%{background-color: rgba(252,47,112,1);}
+}
+
+#Loading div:nth-child(4) span::before{
+    content: '';
+    position: absolute;
+    display: block;
+    right: -2em;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    animation: transparentLoading .8s ease-in-out infinite;
+    animation-delay: .4s
+}
+
+#Loading div:nth-child(5) div{
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+#Loading div:nth-child(5) span{
+    position: absolute;
+    display: block;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: transparent;
+    border:3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #3cefff;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin{
+    to{transform: rotate(360deg);}
+}
+
+#Loading div:nth-child(6) div{
+    position: relative;
+    width:40px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+#Loading div:nth-child(6) span{
+    position: absolute;
+    display: block;
+    height: 1.1em;
+    width: 1.1em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+}
+#Loading div:nth-child(6) span:nth-of-type(2){
+    background-color: #fc2f70;
+    animation: floatLoading .8s ease-in-out alternate infinite;
+    animation-delay: .2s;
+    transform: translateY(100%);
+}
+#Loading div:nth-child(6) span:nth-of-type(1){
+
+    left: -2em;
+    animation: floatLoading .8s ease-in-out alternate infinite;
+}
+
+@keyframes floatLoading{
+    from {
+    transform: translateY(100%);
+    }
+    to {
+    transform: translateY(-100%);
+    }
+}
+
+#Loading div:nth-child(6) span:nth-of-type(3){
+    right: -0.3em;
+    transform: translateY(100%);
+    animation: floatLoading .8s ease-in-out alternate infinite;
+    animation-delay: .4s;
+}
+
+#Loading div:nth-child(7) span{
+    position: relative;
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    border: 2px solid rgb(93,32,75); 
+    animation: spin 1s linear infinite;
+}
+#Loading div:nth-child(7) span:after{
+    content: '';
+    position: absolute;
+    top: -4px;
+    border-radius: 50%;
+    border: 4px solid #fc2f70;
+}   
