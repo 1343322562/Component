@@ -1,7 +1,6 @@
 
 let codeBlockSwitch = function(CodeHtml,CodeCss){ //封装的代码块Switch操作
     let [impactBlock,hideBlockSon,copyHTML,copyCSS,addHTML,addCSS] = [
-                                                    
                                                     document.getElementById("hideSign"),  //
                                                     document.getElementById("stopHide"),
                                                     document.getElementById("copyHTML"),
