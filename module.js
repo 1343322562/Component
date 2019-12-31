@@ -1,30 +1,30 @@
 
-let codeBlockSwitch = function(ShowClickID,CodeHtml,CodeCss){ //封装的代码块Switch操作
-    let [clickBlock,impactBlock,hideBlockSon,copyHTML,copyCSS,addHTML,addCSS] = [
-                                                    document.getElementById(ShowClickID),
-                                                    document.getElementById("hideSign"),
+let codeBlockSwitch = function(CodeHtml,CodeCss){ //封装的代码块Switch操作
+    let [impactBlock,hideBlockSon,copyHTML,copyCSS,addHTML,addCSS] = [
+                                                    
+                                                    document.getElementById("hideSign"),  //
                                                     document.getElementById("stopHide"),
                                                     document.getElementById("copyHTML"),
                                                     document.getElementById("copyCSS"),
                                                     document.getElementById("addHTML"),
                                                     document.getElementById("addCSS")
                                                 ];
-    addHTML.innerText = CodeHtml; //输出HTML代码
-    addCSS.innerText = CodeCss;   //输出CSS代码
-    console.log(10)
+
+    addHTML.innerText = CodeHtml; //向弹出框输出HTML代码
+    addCSS.innerText = CodeCss;   //向弹出框输出CSS代码
     impactBlock.style.display = 'flex'; //显示隐藏块
     hideBlockSon.addEventListener("click",e => e.stopPropagation()) //阻止代码块冒泡
     impactBlock.addEventListener("click",a => impactBlock.style.display = 'none');
 
     // 添加 HTMLinput, 供点击复制。
     const inputHTML = document.createElement('input');
-    inputHTML.setAttribute('readonly', 'readonly'); // 防止手机上弹出软键盘
+    inputHTML.setAttribute('readonly', 'readonly'); //防止手机上弹出软键盘
     inputHTML.setAttribute('style', 'position:absolute;top:0;z-index:-999;'); //隐藏input框
-    inputHTML.setAttribute('value', CodeHtml);
-    document.body.appendChild(inputHTML);
+    inputHTML.setAttribute('value', CodeHtml); //设置需要复制的值
+    document.body.appendChild(inputHTML); //将输入框添加至body
 
     // 添加 CSSinput, 供点击复制。
-    const inputCSS = document.createElement('input');
+    const inputCSS = document.createElement('input'); 
     inputCSS.setAttribute('readonly', 'readonly'); // 防止手机上弹出软键盘
     inputCSS.setAttribute('style', 'position:absolute;top:0;z-index:-999;'); //隐藏input框
     inputCSS.setAttribute('value', CodeCss);
@@ -53,7 +53,7 @@ let codeBlockSwitch = function(ShowClickID,CodeHtml,CodeCss){ //封装的代码�
     // element.select() 可以选中 input/textarea 中的 value
 }
 /*Button*/
-document.getElementById("B1").addEventListener('click',() => codeBlockSwitch("B1",
+document.getElementById("B1").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -96,7 +96,7 @@ document.getElementById("B1").addEventListener('click',() => codeBlockSwitch("B1
         }
     `
 ))  
-document.getElementById("B2").addEventListener('click',() => codeBlockSwitch("B2",
+document.getElementById("B2").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -135,7 +135,7 @@ document.getElementById("B2").addEventListener('click',() => codeBlockSwitch("B2
         }
     `
 ))
-document.getElementById("B3").addEventListener('click',() => codeBlockSwitch("B3",
+document.getElementById("B3").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -174,7 +174,7 @@ document.getElementById("B3").addEventListener('click',() => codeBlockSwitch("B3
         }
     `
 ))
-document.getElementById("B4").addEventListener('click',() => codeBlockSwitch("B4",
+document.getElementById("B4").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -213,7 +213,7 @@ document.getElementById("B4").addEventListener('click',() => codeBlockSwitch("B4
         }
     `
 ))
-document.getElementById("B5").addEventListener('click',() => codeBlockSwitch("B5",
+document.getElementById("B5").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -253,7 +253,7 @@ document.getElementById("B5").addEventListener('click',() => codeBlockSwitch("B5
     `
 ))
 /*Slied*/
-document.getElementById("S6").addEventListener('click',() => codeBlockSwitch("S6",
+document.getElementById("S6").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -295,7 +295,7 @@ document.getElementById("S6").addEventListener('click',() => codeBlockSwitch("S6
         }
     `
 ))
-document.getElementById("S7").addEventListener('click',() => codeBlockSwitch("S7",
+document.getElementById("S7").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -337,7 +337,7 @@ document.getElementById("S7").addEventListener('click',() => codeBlockSwitch("S7
         }
     `
 ))
-document.getElementById("S8").addEventListener('click',() => codeBlockSwitch("S8",
+document.getElementById("S8").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -379,7 +379,7 @@ document.getElementById("S8").addEventListener('click',() => codeBlockSwitch("S8
         }
     `
 ))
-document.getElementById("S9").addEventListener('click',() => codeBlockSwitch("S9",
+document.getElementById("S9").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -421,7 +421,7 @@ document.getElementById("S9").addEventListener('click',() => codeBlockSwitch("S9
         }
     `
 ))
-document.getElementById("S10").addEventListener('click',() => codeBlockSwitch("S10",
+document.getElementById("S10").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -463,7 +463,7 @@ document.getElementById("S10").addEventListener('click',() => codeBlockSwitch("S
         }
     `
 ))
-document.getElementById("S11").addEventListener('click',() => codeBlockSwitch("S11",
+document.getElementById("S11").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -505,7 +505,7 @@ document.getElementById("S11").addEventListener('click',() => codeBlockSwitch("S
         }
     `
 ))
-document.getElementById("S12").addEventListener('click',() => codeBlockSwitch("S12",
+document.getElementById("S12").addEventListener('click',() => codeBlockSwitch(
     `
         <button> Bubble </button>
     `,
@@ -550,7 +550,7 @@ let StopEventPass = document.getElementsByClassName("stopHideInput")
 for (let i = 0; i <= StopEventPass.length - 1; i++) {
     StopEventPass[i].addEventListener("click",e => e.stopPropagation())
 }//监听input父元素，阻止冒泡
-document.getElementById("I13").addEventListener('click',() => codeBlockSwitch("I13",
+document.getElementById("I13").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
          \xa0\xa0\xa0\xa0<input type="text"></input>
@@ -630,7 +630,7 @@ document.getElementById("I13").addEventListener('click',() => codeBlockSwitch("I
         }
     `
 ));
-document.getElementById("I14").addEventListener('click',() => codeBlockSwitch("I14",
+document.getElementById("I14").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
          \xa0\xa0\xa0\xa0<input type="text"></input>
@@ -710,7 +710,7 @@ document.getElementById("I14").addEventListener('click',() => codeBlockSwitch("I
         }
     `
 ));
-document.getElementById("I15").addEventListener('click',() => codeBlockSwitch("I15",
+document.getElementById("I15").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
          \xa0\xa0\xa0\xa0<input type="text"></input>
@@ -793,7 +793,7 @@ document.getElementById("I15").addEventListener('click',() => codeBlockSwitch("I
         }
     `
 ));
-document.getElementById("I16").addEventListener('click',() => codeBlockSwitch("I16",
+document.getElementById("I16").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
          \xa0\xa0\xa0\xa0<input type="text"></input>
@@ -844,7 +844,7 @@ document.getElementById("I16").addEventListener('click',() => codeBlockSwitch("I
 ));
 
 /*Text*/
-document.getElementById("T17").addEventListener('click',() => codeBlockSwitch("T17",
+document.getElementById("T17").addEventListener('click',() => codeBlockSwitch(
     `
         <span>Bars</span>
     `,
@@ -886,7 +886,7 @@ document.getElementById("T17").addEventListener('click',() => codeBlockSwitch("T
         }
     `
 ));
-document.getElementById("T18").addEventListener('click',() => codeBlockSwitch("T18",
+document.getElementById("T18").addEventListener('click',() => codeBlockSwitch(
     `
         <span>Bars</span>
     `,
@@ -929,7 +929,7 @@ document.getElementById("T18").addEventListener('click',() => codeBlockSwitch("T
         }
     `
 ));
-document.getElementById("T19").addEventListener('click',() => codeBlockSwitch("T19",
+document.getElementById("T19").addEventListener('click',() => codeBlockSwitch(
     `
         <span>Bars</span>
     `,
@@ -960,7 +960,7 @@ document.getElementById("T19").addEventListener('click',() => codeBlockSwitch("T
         }
     `
 ));
-document.getElementById("T20").addEventListener('click',() => codeBlockSwitch("T20",
+document.getElementById("T20").addEventListener('click',() => codeBlockSwitch(
     `
         <span>Bars</span>
     `,
@@ -994,7 +994,7 @@ document.getElementById("T20").addEventListener('click',() => codeBlockSwitch("T
         }
     `
 ));
-document.getElementById("T21").addEventListener('click',() => codeBlockSwitch("T21",
+document.getElementById("T21").addEventListener('click',() => codeBlockSwitch(
     `
         <span>Bars</span>
     `,
@@ -1028,7 +1028,7 @@ document.getElementById("T21").addEventListener('click',() => codeBlockSwitch("T
 ));
 
 /*Loading*/
-document.getElementById("L1").addEventListener('click',() => codeBlockSwitch("L1",
+document.getElementById("L1").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
         \xa0\xa0\xa0\xa0<span></span>
@@ -1069,7 +1069,7 @@ document.getElementById("L1").addEventListener('click',() => codeBlockSwitch("L1
         }
     `
 ));
-document.getElementById("L2").addEventListener('click',() => codeBlockSwitch("L2",
+document.getElementById("L2").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
         \xa0\xa0\xa0\xa0<span></span>
@@ -1110,7 +1110,7 @@ document.getElementById("L2").addEventListener('click',() => codeBlockSwitch("L2
         }
     `
 ));
-document.getElementById("L3").addEventListener('click',() => codeBlockSwitch("L3",
+document.getElementById("L3").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
         \xa0\xa0\xa0\xa0<span></span>
@@ -1157,7 +1157,7 @@ document.getElementById("L3").addEventListener('click',() => codeBlockSwitch("L3
         }
     `
 ));
-document.getElementById("L4").addEventListener('click',() => codeBlockSwitch("L4",
+document.getElementById("L4").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
         \xa0\xa0\xa0\xa0<span></span>
@@ -1208,7 +1208,7 @@ document.getElementById("L4").addEventListener('click',() => codeBlockSwitch("L4
         }
     `
 ));
-document.getElementById("L5").addEventListener('click',() => codeBlockSwitch("L5",
+document.getElementById("L5").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
         \xa0\xa0\xa0\xa0<span></span>
@@ -1238,7 +1238,7 @@ document.getElementById("L5").addEventListener('click',() => codeBlockSwitch("L5
         }
     `
 ));
-document.getElementById("L6").addEventListener('click',() => codeBlockSwitch("L6",
+document.getElementById("L6").addEventListener('click',() => codeBlockSwitch(
     `
         <div>
         \xa0\xa0\xa0\xa0<span></span>
@@ -1290,7 +1290,7 @@ document.getElementById("L6").addEventListener('click',() => codeBlockSwitch("L6
         }
     `
 ));
-document.getElementById("L7").addEventListener('click',() => codeBlockSwitch("L7",
+document.getElementById("L7").addEventListener('click',() => codeBlockSwitch(
     `
         <span></span>
     `,
